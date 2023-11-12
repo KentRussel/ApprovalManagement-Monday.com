@@ -1,0 +1,162 @@
+﻿@model ApprovalManagement.Models.MyViewModel
+
+@{
+    ViewData["Title"] = "Approved";
+    Layout = "_Layout1";
+
+    string boardId = Model.PayloadToken.boardId;
+    string pulseId = Model.PayloadToken.pulseId;
+    string approvalStatusId = "status9"; //change to status column ID 
+    string remarksId = "long_text7";
+    string approvedBudgetId = "numeric";
+    string dateOfApprovalId = "date4";
+
+    //Column Values
+    string name = Model.DataItems.column_values[0].text; 
+    string briefDescription = Model.DataItems.column_values[3].text; 
+    string amountText = Model.DataItems.column_values[1].text; 
+    string status = Model.DataItems.column_values[5].text;
+    string approver = Model.DataItems.column_values[8].text;
+    string email = Model.DataItems.column_values[4].text;
+    string reason = Model.DataItems.column_values[2].text;
+    string departmentHead = "kentrusselpayumo@gmail.com";
+    string divisionHead = "kentpayumo@gmail.com";
+    string ceo = "kentrussel37@gmail.com";
+
+}
+
+@if (ViewData["ApprovalStatus"]?.ToString() == "Approved")
+{
+    <div class="mt-5">
+        <div class="card border rounded col-xl-6 mx-auto">
+            <h3 class="card-header text-center">Approval has been completed!</h3>
+            <input type="hidden" name="ProjectId" value="pulseId" />
+            <div class="card-body px-4 px-md-4 pb-4">
+                <div class="row text-start">
+                    <div class="col-12 col-md-6">
+                        <p class="pb-2"><b>Name:</b> @name </p>
+                        <p class="pb-2"><b>Email:</b> @email </p>
+                        <p class="pb-2"><b>Description:</b> @briefDescription </p>
+                        <p class="pb-2"><b>Reason:</b> @reason </p>
+                        <p class="pb-2"><b>Budget:</b> @amountText</p>
+                        <p class="pb-2"><b>Approver:</b> @approver</p>
+
+                    </div>
+                    <div class="col-12 col-md-6 pl-3">
+                        <p class="pb-2" ><b>Your Response:</b> <spam style="color:green; font-size: 18px; font-weight: 600">@approvalStatus</spam></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else if (ViewData["ApprovalStatus"]?.ToString() == "Declined")
+{
+    <div class="mt-5">
+        <div class="card border rounded col-xl-6 mx-auto">
+            <h3 class="card-header text-center">Approval has been completed!</h3>
+            <input type="hidden" name="ProjectId" value="pulseId" />
+            <div class="card-body px-4 px-md-4 pb-4">
+                <div class="row text-start">
+                    <div class="col-12 col-md-6">
+                        <p class="pb-2"><b>Project Name:</b> @projectName </p>
+                        <p class="pb-2"><b>Description:</b> @description </p>
+                        <p class="pb-2"><b>Timeline:</b> @timeline </p>
+                        <p class="pb-2"><b>Manager:</b> @manager </p>
+                        <p class="pb-2"><b>Budget:</b> @plannedBudget </p>
+                    </div>
+                    <div class="col-12 col-md-6 pl-3">
+                        <p class="pb-2"><b>Your Response:</b> <spam style="color:red; font-size: 18px; font-weight: 600">@approvalStatus</spam></p>
+                        <p class="pb-2"><b>Remarks:</b> @remarks</p>
+                        <p class="pb-2"><b>Date of Approval:</b> @dateOfApproval</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else if (ViewData["ApprovalStatus"]?.ToString() == "Pending")
+{
+    @if (ViewData["ApprovalResponse"]?.ToString() == "Approve")
+    {
+        <div class="mt-5">
+            <div class="card border rounded col-xl-6 mx-auto">
+                <div class="card-header text-center">
+                    <h5 class="text-center text-success mb-2"><em>Budget Approval</em></h5>
+                </div>
+                
+                <form method="post" action="@Url.Action("UpdateApprovalStatus", "MondayProject")">
+                    <input type="hidden" name="boardId" value="@boardId" />
+                    <input type="hidden" name="pulseId" value="@pulseId" />
+                    <input type="hidden" name="approvalStatusId" value="@approvalStatusId" />
+                    <input type="hidden" name="remarksId" value="@remarksId" />
+                    <input type="hidden" name="approvedBudgetId" value="@approvedBudgetId" />
+                    <input type="hidden" name="dateOfApprovalId" value="@dateOfApprovalId" />
+                    <input type="hidden" name="dateOfApproval" value="@DateTime.Today.ToString("yyyy-MM-dd")" />
+                    <div class="card-body px-4 px-md-4 pb-4 px-sm-4 ">
+                        <div class="row text-start">
+                            <div class="col-12 col-md-6">
+                                <p class="pb-2"><b>Description:</b> @description </p>
+                                <p class="pb-2"><b>Timeline:</b> @timeline </p>
+                                <p class="pb-2"><b>Manager:</b> @manager </p>
+                                <p class="pb-2 d-flex gap-2 align-items-center">
+                                    <b>Budget:</b>
+                                    <input class="form-control" type="text" name="approvedBudget" value="@plannedBudget" />
+                                </p>
+                            </div>
+                            <div class="col-12 col-md-6 pl-3">
+                                <label class="pb-2" for="remarks"><b>Remarks: </b></label>
+                                <textarea name="remarks" style="height:125px" id="basic-default-message" class="form-control h-80 h-md-120" required></textarea>
+                            </div>
+                        </div>
+                        <div class="pt-4 pb-3 d-flex justify-content-center">
+                            <input type="hidden" name="approvalStatus" value="Approved" />
+                            <input type="submit" onsubmit="window.close()" value="Approve" class="btn btn-primary mx-2" style="min-width: 100px" />
+                            <button onclick="window.close()" class="btn btn-secondary mx-2" style="min-width: 100px">Close</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    }
+    else if (ViewData["ApprovalResponse"]?.ToString() == "Decline")
+    {
+        <div class="mt-5">
+            <div class="card border rounded col-xl-6 mx-auto">
+                <div class="card-header text-center">
+                    <h5 class="text-center text-danger mb-2"><em>Budget Declined</em></h5>
+                </div>
+                <form method="post" action="@Url.Action("UpdateApprovalStatus", "MondayProject")">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" name="boardId" value="@boardId" />
+                    <input type="hidden" name="pulseId" value="@pulseId" />
+                    <input type="hidden" name="approvalStatusId" value="@approvalStatusId" />
+                    <input type="hidden" name="remarksId" value="@remarksId" />
+                    <input type="hidden" name="approvedBudgetId" value="@approvedBudgetId" />
+                    <input type="hidden" name="dateOfApprovalId" value="@dateOfApprovalId" />
+                    <input type="hidden" name="dateOfApproval" value="@DateTime.Today.ToString("yyyy-MM-dd")" />
+                    <div class="card-body px-4 px-md-4 pb-4 px-sm-4 ">
+                        <div class="row text-start">
+                            <div class="col-12 col-md-6">
+                                <p class="pb-2"><b>Description:</b> @description </p>
+                                <p class="pb-2"><b>Timeline:</b> @timeline </p>
+                                <p class="pb-2"><b>Manager:</b> @manager </p>
+                                <p class="pb-2"><b>Budget:</b> @plannedBudget </p>
+                            </div>
+                            <div class="col-12 col-md-6 pl-3">
+                                <label class="pb-2" for="remarks"><b>Remarks: </b></label>
+                                <textarea name="remarks" style="height:125px" id="basic-default-message" class="form-control h-80 h-md-120" required></textarea>-
+                            </div>
+                        </div>
+                        <div class="pt-4 pb-3 d-flex justify-content-center">
+                            <input type="hidden" name="approvalStatus" value="Declined" />
+                            <input type="submit" onsubmit="window.close()" value="Decline" class="btn btn-danger mx-2" style="min-width: 100px" />
+                            <button onclick="window.close()" class="btn btn-secondary mx-2" style="min-width: 100px">Close</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    }
+    
+}

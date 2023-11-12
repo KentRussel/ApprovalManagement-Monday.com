@@ -1,0 +1,608 @@
+09/05/2023 2:40:58 pm: PUMASOK SA YUNG REQUEST MULA SA MONDAY
+09/05/2023 2:40:58 pm: PUMASOK SA YUNG INITIAL CHALLENGE REQUEST
+09/05/2023 2:41:58 pm: PUMASOK SA YUNG REQUEST MULA SA MONDAY
+09/05/2023 2:41:58 pm: PUMASOK SA YUNG EVENT REQUEST
+09/05/2023 2:42:22 pm: PUMASOK SA YUNG REQUEST MULA SA MONDAY
+09/05/2023 2:42:22 pm: PUMASOK SA YUNG EVENT REQUEST
+09/05/2023 2:43:07 pm: PUMASOK SA YUNG REQUEST MULA SA MONDAY
+09/05/2023 2:58:55 pm: PUMASOK SA YUNG EVENT REQUEST
+10/05/2023 4:04:31 pm: PUMASOK YUNG REQUEST MULA SA MONDAY
+10/05/2023 4:04:32 pm: PUMASOK SA YUNG INITIAL CHALLENGE REQUEST
+10/05/2023 4:05:47 pm: PUMASOK YUNG REQUEST MULA SA MONDAY
+10/05/2023 4:05:54 pm: PUMASOK YUNG API CREDENTIALS
+10/05/2023 4:05:57 pm: PUMASOK YUNG EVENT PAYLOAD: 
+Payload: {
+  "userId": 38913618,
+  "originalTriggerUuid": null,
+  "boardId": 4167624600,
+  "groupId": "new_group33034",
+  "pulseId": 4167624638,
+  "pulseName": "Item 2",
+  "columnId": "status",
+  "columnType": "color",
+  "columnTitle": "Project Status",
+  "value": {
+    "label": {
+      "index": 2,
+      "text": "For Budget Approval",
+      "style": {
+        "color": "#66CCFF",
+        "border": "#5AB3E0",
+        "var_name": "turquoise"
+      },
+      "is_done": false
+    },
+    "post_id": null
+  },
+  "previousValue": {
+    "label": {
+      "index": 0,
+      "text": "Preparation",
+      "style": {
+        "color": "#fdab3d",
+        "border": "#E99729",
+        "var_name": "orange"
+      },
+      "is_done": false
+    },
+    "post_id": null
+  },
+  "changedAt": 1683705933.835633,
+  "isTopGroup": false,
+  "app": "monday",
+  "type": "update_column_value",
+  "triggerTime": "2023-05-10T08:05:34.198Z",
+  "subscriptionId": 228455311,
+  "triggerUuid": "c8ca4dbb6827d36875b36c964d3abdbc"
+}
+10/05/2023 4:21:15 pm: PUMASOK YUNG REQUEST MULA SA MONDAY
+10/05/2023 4:21:16 pm: PUMASOK YUNG API CREDENTIALS
+10/05/2023 4:21:16 pm: PUMASOK YUNG EVENT PAYLOAD: 
+Payload: {
+  "userId": 38913618,
+  "originalTriggerUuid": null,
+  "boardId": 4167624600,
+  "groupId": "new_group33034",
+  "pulseId": 4167624654,
+  "pulseName": "Item 3",
+  "columnId": "status",
+  "columnType": "color",
+  "columnTitle": "Project Status",
+  "value": {
+    "label": {
+      "index": 2,
+      "text": "For Budget Approval",
+      "style": {
+        "color": "#66CCFF",
+        "border": "#5AB3E0",
+        "var_name": "turquoise"
+      },
+      "is_done": false
+    },
+    "post_id": null
+  },
+  "previousValue": {
+    "label": {
+      "index": 0,
+      "text": "Preparation",
+      "style": {
+        "color": "#fdab3d",
+        "border": "#E99729",
+        "var_name": "orange"
+      },
+      "is_done": false
+    },
+    "post_id": null
+  },
+  "changedAt": 1683706868.4220657,
+  "isTopGroup": false,
+  "app": "monday",
+  "type": "update_column_value",
+  "triggerTime": "2023-05-10T08:21:08.787Z",
+  "subscriptionId": 228455311,
+  "triggerUuid": "2be44e37ce934892aaa222812bd0d0a4"
+}
+10/05/2023 4:21:23 pm: NAG-SEND NA NG EMAIL SA APPROVER!!!
+10/05/2023 4:35:11 pm: PUMASOK YUNG REQUEST MULA SA MONDAY
+10/05/2023 4:35:11 pm: PUMASOK YUNG API CREDENTIALS
+10/05/2023 4:35:11 pm: PUMASOK YUNG EVENT PAYLOAD: 
+Payload: {
+  "userId": 38913618,
+  "originalTriggerUuid": null,
+  "boardId": 4167624600,
+  "groupId": "new_group",
+  "pulseId": 4167624638,
+  "pulseName": "Item 2",
+  "columnId": "status",
+  "columnType": "color",
+  "columnTitle": "Project Status",
+  "value": {
+    "label": {
+      "index": 2,
+      "text": "For Budget Approval",
+      "style": {
+        "color": "#66CCFF",
+        "border": "#5AB3E0",
+        "var_name": "turquoise"
+      },
+      "is_done": false
+    },
+    "post_id": null
+  },
+  "previousValue": {
+    "label": {
+      "index": 0,
+      "text": "Preparation",
+      "style": {
+        "color": "#fdab3d",
+        "border": "#E99729",
+        "var_name": "orange"
+      },
+      "is_done": false
+    },
+    "post_id": null
+  },
+  "changedAt": 1683707707.431863,
+  "isTopGroup": false,
+  "app": "monday",
+  "type": "update_column_value",
+  "triggerTime": "2023-05-10T08:35:07.819Z",
+  "subscriptionId": 228455311,
+  "triggerUuid": "b798b4be34404309aab1f2417c393619"
+}
+10/05/2023 4:35:17 pm: NAG-SEND NA NG EMAIL SA APPROVER!!!
+10/05/2023 4:37:41 pm: PUMASOK YUNG REQUEST MULA SA MONDAY
+10/05/2023 4:37:41 pm: PUMASOK YUNG API CREDENTIALS
+10/05/2023 4:37:41 pm: PUMASOK YUNG EVENT PAYLOAD: 
+Payload: {
+  "userId": 38913618,
+  "originalTriggerUuid": null,
+  "boardId": 4167624600,
+  "groupId": "new_group33034",
+  "pulseId": 4167624638,
+  "pulseName": "Item 2",
+  "columnId": "status",
+  "columnType": "color",
+  "columnTitle": "Project Status",
+  "value": {
+    "label": {
+      "index": 2,
+      "text": "For Budget Approval",
+      "style": {
+        "color": "#66CCFF",
+        "border": "#5AB3E0",
+        "var_name": "turquoise"
+      },
+      "is_done": false
+    },
+    "post_id": null
+  },
+  "previousValue": {
+    "label": {
+      "index": 0,
+      "text": "Preparation",
+      "style": {
+        "color": "#fdab3d",
+        "border": "#E99729",
+        "var_name": "orange"
+      },
+      "is_done": false
+    },
+    "post_id": null
+  },
+  "changedAt": 1683707850.781356,
+  "isTopGroup": false,
+  "app": "monday",
+  "type": "update_column_value",
+  "triggerTime": "2023-05-10T08:37:31.144Z",
+  "subscriptionId": 228455311,
+  "triggerUuid": "4c6264033197ff46a6931872315140ce"
+}
+10/05/2023 4:37:48 pm: NAG-SEND NA NG EMAIL SA APPROVER!!!
+10/05/2023 4:47:59 pm: PUMASOK YUNG REQUEST MULA SA MONDAY
+10/05/2023 4:47:59 pm: PUMASOK YUNG API CREDENTIALS
+10/05/2023 4:47:59 pm: PUMASOK YUNG EVENT PAYLOAD: 
+Payload: {
+  "userId": 38913618,
+  "originalTriggerUuid": null,
+  "boardId": 4167624600,
+  "groupId": "new_group33034",
+  "pulseId": 4167624638,
+  "pulseName": "Item 2",
+  "columnId": "status",
+  "columnType": "color",
+  "columnTitle": "Project Status",
+  "value": {
+    "label": {
+      "index": 2,
+      "text": "For Budget Approval",
+      "style": {
+        "color": "#66CCFF",
+        "border": "#5AB3E0",
+        "var_name": "turquoise"
+      },
+      "is_done": false
+    },
+    "post_id": null
+  },
+  "previousValue": {
+    "label": {
+      "index": 0,
+      "text": "Preparation",
+      "style": {
+        "color": "#fdab3d",
+        "border": "#E99729",
+        "var_name": "orange"
+      },
+      "is_done": false
+    },
+    "post_id": null
+  },
+  "changedAt": 1683708471.8049567,
+  "isTopGroup": false,
+  "app": "monday",
+  "type": "update_column_value",
+  "triggerTime": "2023-05-10T08:47:52.182Z",
+  "subscriptionId": 228455311,
+  "triggerUuid": "3b57bcc5fbb34c3cb3e95490f3975b5c"
+}
+10/05/2023 4:49:02 pm: PUMASOK YUNG REQUEST MULA SA MONDAY
+10/05/2023 4:49:06 pm: PUMASOK YUNG API CREDENTIALS
+10/05/2023 4:49:08 pm: PUMASOK YUNG EVENT PAYLOAD: 
+Payload: {
+  "userId": 38913618,
+  "originalTriggerUuid": null,
+  "boardId": 4167624600,
+  "groupId": "new_group",
+  "pulseId": 4167624654,
+  "pulseName": "Item 3",
+  "columnId": "status",
+  "columnType": "color",
+  "columnTitle": "Project Status",
+  "value": {
+    "label": {
+      "index": 2,
+      "text": "For Budget Approval",
+      "style": {
+        "color": "#66CCFF",
+        "border": "#5AB3E0",
+        "var_name": "turquoise"
+      },
+      "is_done": false
+    },
+    "post_id": null
+  },
+  "previousValue": {
+    "label": {
+      "index": 0,
+      "text": "Preparation",
+      "style": {
+        "color": "#fdab3d",
+        "border": "#E99729",
+        "var_name": "orange"
+      },
+      "is_done": false
+    },
+    "post_id": null
+  },
+  "changedAt": 1683708532.3446927,
+  "isTopGroup": false,
+  "app": "monday",
+  "type": "update_column_value",
+  "triggerTime": "2023-05-10T08:48:52.693Z",
+  "subscriptionId": 228455311,
+  "triggerUuid": "20896854fe7dc7bd28a79619d2535a33"
+}
+10/05/2023 4:49:34 pm: NAG-SEND NA NG EMAIL SA APPROVER!!!
+10/05/2023 4:49:41 pm: The operation has timed out.
+10/05/2023 4:52:34 pm: PUMASOK YUNG REQUEST MULA SA MONDAY
+10/05/2023 4:52:34 pm: PUMASOK YUNG API CREDENTIALS
+10/05/2023 4:52:34 pm: PUMASOK YUNG EVENT PAYLOAD: 
+Payload: {
+  "userId": 38913618,
+  "originalTriggerUuid": null,
+  "boardId": 4167624600,
+  "groupId": "new_group33034",
+  "pulseId": 4167624638,
+  "pulseName": "Item 2",
+  "columnId": "status",
+  "columnType": "color",
+  "columnTitle": "Project Status",
+  "value": {
+    "label": {
+      "index": 2,
+      "text": "For Budget Approval",
+      "style": {
+        "color": "#66CCFF",
+        "border": "#5AB3E0",
+        "var_name": "turquoise"
+      },
+      "is_done": false
+    },
+    "post_id": null
+  },
+  "previousValue": {
+    "label": {
+      "index": 0,
+      "text": "Preparation",
+      "style": {
+        "color": "#fdab3d",
+        "border": "#E99729",
+        "var_name": "orange"
+      },
+      "is_done": false
+    },
+    "post_id": null
+  },
+  "changedAt": 1683708755.378967,
+  "isTopGroup": false,
+  "app": "monday",
+  "type": "update_column_value",
+  "triggerTime": "2023-05-10T08:52:35.751Z",
+  "subscriptionId": 228455311,
+  "triggerUuid": "6fc880dd00d4ae01e838452ce9552927"
+}
+10/05/2023 4:52:39 pm: NAG-SEND NA NG EMAIL SA APPROVER!!!
+10/05/2023 4:52:59 pm: PUMASOK YUNG REQUEST MULA SA MONDAY
+10/05/2023 4:52:59 pm: PUMASOK YUNG API CREDENTIALS
+10/05/2023 4:52:59 pm: PUMASOK YUNG EVENT PAYLOAD: 
+Payload: {
+  "userId": 38913618,
+  "originalTriggerUuid": null,
+  "boardId": 4167624600,
+  "groupId": "new_group33034",
+  "pulseId": 4167624638,
+  "pulseName": "Item 2",
+  "columnId": "status",
+  "columnType": "color",
+  "columnTitle": "Project Status",
+  "value": {
+    "label": {
+      "index": 2,
+      "text": "For Budget Approval",
+      "style": {
+        "color": "#66CCFF",
+        "border": "#5AB3E0",
+        "var_name": "turquoise"
+      },
+      "is_done": false
+    },
+    "post_id": null
+  },
+  "previousValue": {
+    "label": {
+      "index": 0,
+      "text": "Preparation",
+      "style": {
+        "color": "#fdab3d",
+        "border": "#E99729",
+        "var_name": "orange"
+      },
+      "is_done": false
+    },
+    "post_id": null
+  },
+  "changedAt": 1683708780.3105295,
+  "isTopGroup": false,
+  "app": "monday",
+  "type": "update_column_value",
+  "triggerTime": "2023-05-10T08:53:00.715Z",
+  "subscriptionId": 228455311,
+  "triggerUuid": "f98ae8b85ad09b93e5cde8f7aba264ef"
+}
+10/05/2023 4:53:03 pm: NAG-SEND NA NG EMAIL SA APPROVER!!!
+10/05/2023 4:54:22 pm: PUMASOK YUNG REQUEST MULA SA MONDAY
+10/05/2023 4:54:22 pm: PUMASOK YUNG API CREDENTIALS
+10/05/2023 4:54:22 pm: PUMASOK YUNG EVENT PAYLOAD: 
+Payload: {
+  "userId": 38913618,
+  "originalTriggerUuid": null,
+  "boardId": 4167624600,
+  "groupId": "new_group33034",
+  "pulseId": 4167624654,
+  "pulseName": "Item 3",
+  "columnId": "status",
+  "columnType": "color",
+  "columnTitle": "Project Status",
+  "value": {
+    "label": {
+      "index": 2,
+      "text": "For Budget Approval",
+      "style": {
+        "color": "#66CCFF",
+        "border": "#5AB3E0",
+        "var_name": "turquoise"
+      },
+      "is_done": false
+    },
+    "post_id": null
+  },
+  "previousValue": {
+    "label": {
+      "index": 0,
+      "text": "Preparation",
+      "style": {
+        "color": "#fdab3d",
+        "border": "#E99729",
+        "var_name": "orange"
+      },
+      "is_done": false
+    },
+    "post_id": null
+  },
+  "changedAt": 1683708857.7250743,
+  "isTopGroup": false,
+  "app": "monday",
+  "type": "update_column_value",
+  "triggerTime": "2023-05-10T08:54:18.081Z",
+  "subscriptionId": 228455311,
+  "triggerUuid": "b2915e94568a15565dd421c60e08e092"
+}
+10/05/2023 4:54:28 pm: NAG-SEND NA NG EMAIL SA APPROVER!!!
+10/05/2023 4:57:39 pm: PUMASOK YUNG REQUEST MULA SA MONDAY
+10/05/2023 4:57:39 pm: PUMASOK YUNG API CREDENTIALS
+10/05/2023 4:57:39 pm: PUMASOK YUNG EVENT PAYLOAD: 
+Payload: {
+  "userId": 38913618,
+  "originalTriggerUuid": null,
+  "boardId": 4167624600,
+  "groupId": "new_group",
+  "pulseId": 4167624629,
+  "pulseName": "Item 1",
+  "columnId": "status",
+  "columnType": "color",
+  "columnTitle": "Project Status",
+  "value": {
+    "label": {
+      "index": 2,
+      "text": "For Budget Approval",
+      "style": {
+        "color": "#66CCFF",
+        "border": "#5AB3E0",
+        "var_name": "turquoise"
+      },
+      "is_done": false
+    },
+    "post_id": null
+  },
+  "previousValue": {
+    "label": {
+      "index": 0,
+      "text": "Preparation",
+      "style": {
+        "color": "#fdab3d",
+        "border": "#E99729",
+        "var_name": "orange"
+      },
+      "is_done": false
+    },
+    "post_id": null
+  },
+  "changedAt": 1683709055.3077707,
+  "isTopGroup": false,
+  "app": "monday",
+  "type": "update_column_value",
+  "triggerTime": "2023-05-10T08:57:35.73Z",
+  "subscriptionId": 228455311,
+  "triggerUuid": "808fe4da3d5dccf9dce1476226770666"
+}
+10/05/2023 4:57:44 pm: NAG-SEND NA NG EMAIL SA APPROVER!!!
+10/2/2023 3:35:28 PM: Response receieve
+10/2/2023 3:36:39 PM: Initial request was successful
+10/2/2023 3:39:07 PM: Response receieve
+10/2/2023 3:39:07 PM: Initial request was successful
+10/2/2023 3:39:37 PM: Response receieve
+10/2/2023 3:39:58 PM: Initial request was successful
+10/2/2023 3:41:12 PM: Response receieve
+10/2/2023 3:41:18 PM: Initial request was successful
+10/2/2023 3:41:54 PM: Response receieve
+10/2/2023 3:42:22 PM: API Credentials successfully sent
+10/2/2023 3:42:33 PM: Event Payload was successful
+Payload: {
+  "userId": 17358154,
+  "originalTriggerUuid": null,
+  "boardId": 5034171014,
+  "pulseId": 5255899191,
+  "pulseName": "Kent Russel C. Payumo (copy)",
+  "groupId": "topics",
+  "groupName": "Group Title",
+  "groupColor": "#579bfc",
+  "isTopGroup": true,
+  "columnValues": {
+    "email": {
+      "text": "kentrusselpayumo@gmail.com",
+      "email": "kentrusselpayumo@gmail.com"
+    },
+    "number": {
+      "value": 2000,
+      "unit": null
+    },
+    "people0": {
+      "changed_at": "2023-09-25T05:33:45.429Z",
+      "personsAndTeams": [
+        {
+          "id": 17358154,
+          "kind": "person"
+        }
+      ]
+    },
+    "people8": {
+      "changed_at": "2023-09-25T05:33:47.748Z",
+      "personsAndTeams": [
+        {
+          "id": 17358154,
+          "kind": "person"
+        }
+      ]
+    },
+    "status2": {
+      "label": {
+        "index": 1,
+        "text": "Approved",
+        "style": {
+          "color": "#00c875",
+          "border": "#00B461",
+          "var_name": "green-shadow"
+        },
+        "is_done": true
+      },
+      "post_id": null
+    },
+    "status3": {
+      "label": {
+        "index": 5,
+        "text": null,
+        "style": {
+          "color": "#c4c4c4",
+          "border": "#B0B0B0",
+          "var_name": "grey"
+        },
+        "is_done": false
+      },
+      "post_id": null
+    },
+    "people_1": {
+      "changed_at": "2023-09-25T05:33:50.014Z",
+      "personsAndTeams": [
+        {
+          "id": 17358154,
+          "kind": "person"
+        }
+      ]
+    },
+    "status_1": {
+      "label": {
+        "index": 5,
+        "text": null,
+        "style": {
+          "color": "#c4c4c4",
+          "border": "#B0B0B0",
+          "var_name": "grey"
+        },
+        "is_done": false
+      },
+      "post_id": null
+    },
+    "dropdown3": {
+      "chosenValues": [
+        {
+          "id": 1,
+          "name": "Division Manager"
+        }
+      ]
+    },
+    "long_text": {
+      "text": "Sample",
+      "changed_at": "2023-09-25T05:18:20.458Z"
+    },
+    "long_text_1": {
+      "text": "Sample",
+      "changed_at": "2023-09-25T05:18:20.459Z"
+    }
+  },
+  "app": "monday",
+  "type": "create_pulse",
+  "triggerTime": "2023-10-02T07:41:39.942Z",
+  "subscriptionId": 270553010,
+  "triggerUuid": "1593ac2482340ca4bcca7444d707f1a0"
+}

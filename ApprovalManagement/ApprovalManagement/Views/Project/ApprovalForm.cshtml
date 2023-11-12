@@ -1,0 +1,125 @@
+﻿@model ApprovalManagement.Models.Project
+
+@{
+    ViewData["Title"] = "Approved";
+    Layout = "_Layout1";
+}
+
+@if (ViewData["ApprovalStatus"]?.ToString() == "Approved")
+{
+    <div class="mt-5">
+        <div class="card border rounded col-xl-6 mx-auto">
+            <h2 class="card-header text-center">Approval has been completed!</h2>
+            <input type="hidden" name="ProjectId" value="@Model.ProjectId" />
+            <div class="card-body px-1 px-md-4 pb-4">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <p class="pb-2"><b>Project Name:</b> @Html.DisplayFor(model => model.ProjectName)</p>
+                        <p class="pb-2"><b>Description:</b> @Html.DisplayFor(model => model.Description)</p>
+                        <p class="pb-2"><b>Timeline:</b> @Model.StartDate.ToString("MMM dd, yyyy") - @Model.EndDate.ToString("MMM dd, yyyy")</p>
+                        <p class="pb-2"><b>Manager:</b> @Html.DisplayFor(model => model.Manager)</p>
+                        <p class="pb-2"><b>Budget:</b> @Html.DisplayFor(model => model.PlannedBudget)</p>
+                    </div>
+                    <div class="col-12 col-md-6 pl-3">
+                        <p class="pb-2" ><b>Your Response:</b> <spam style="color:green; font-size: 18px; font-weight: 600">@Html.DisplayFor(model => model.ApprovalStatus)</spam></p>
+                        <p class="pb-2"><b>Your Remarks:</b> @Html.DisplayFor(model => model.ApprovalRemarks)</p>
+                        <p class="pb-2"><b>Date of Approval:</b> @Html.DisplayFor(model => model.DateOfApproval)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else if (ViewData["ApprovalStatus"]?.ToString() == "Declined" && @Model.DateOfApproval != null)
+{
+    <div class="mt-5">
+        <div class="card border rounded col-xl-6 mx-auto">
+            <h2 class="card-header text-center">Approval has been completed!</h2>
+            <input type="hidden" name="ProjectId" value="@Model.ProjectId" />
+            <div class="card-body px-1 px-md-4 pb-4">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <p class="pb-2"><b>Project Name:</b> @Html.DisplayFor(model => model.ProjectName)</p>
+                        <p class="pb-2"><b>Description:</b> @Html.DisplayFor(model => model.Description)</p>
+                        <p class="pb-2"><b>Timeline:</b> @Model.StartDate.ToString("MMM dd, yyyy") - @Model.EndDate.ToString("MMM dd, yyyy")</p>
+                        <p class="pb-2"><b>Manager:</b> @Html.DisplayFor(model => model.Manager)</p>
+                        <p class="pb-2"><b>Budget:</b> @Html.DisplayFor(model => model.PlannedBudget)</p>
+                    </div>
+                    <div class="col-12 col-md-6 pl-3">
+                        <p class="pb-2"><b>Your Response:</b> <spam style="color:red; font-size: 18px; font-weight: 600">@Html.DisplayFor(model => model.ApprovalStatus)</spam></p>
+                        <p class="pb-2"><b>Remarks:</b> @Html.DisplayFor(model => model.ApprovalRemarks)</p>
+                        <p class="pb-2"><b>Date of Approval:</b> @Model.DateOfApproval.ToString("MMM dd, yyyy")</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else if (ViewData["ApprovalStatus"]?.ToString() == "Pending")
+{
+    @if (ViewData["ApprovalResponse"]?.ToString() == "Approve")
+    {
+        <div class="mt-5">
+            <div class="card border rounded col-xl-6 mx-auto">
+                <h2 class="card-header text-center">@Html.DisplayFor(model => model.ProjectName)</h2>
+                <h5 class="text-center text-success mb-2" style="margin-top: -15px"><em>Budget Approval</em></h5>
+                <form method="post" action="@Url.Action("UpdateApprovalStatus", "Project")">
+                    <input type="hidden" name="ProjectId" value="@Model.ProjectId" />
+                    <div class="card-body px-1 px-md-4 pb-4">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <p class="pb-2"><b>Description:</b> @Html.DisplayFor(model => model.Description)</p>
+                                <p class="pb-2"><b>Timeline:</b> @Model.StartDate.ToString("MMM dd, yyyy") - @Model.EndDate.ToString("MMM dd, yyyy")</p>
+                                <p class="pb-2"><b>Manager:</b> @Html.DisplayFor(model => model.Manager)</p>
+                                <p class="pb-2"><b>Budget:</b> @Html.DisplayFor(model => model.PlannedBudget)</p>
+                            </div>
+                            <div class="col-12 col-md-6 pl-3">
+                                <label class="pb-2" for="remarks"><b>Remarks: </b></label>
+                                <textarea name="remarks" style="height:125px" id="basic-default-message" class="form-control h-80 h-md-120" required></textarea>
+                            </div>
+                        </div>
+                        <div class="pt-4 pb-3 d-flex justify-content-center">
+                            <input type="hidden" name="approvalstatus" value="Approved" />
+                            <input type="submit" onsubmit="window.close()" value="Approve" class="btn btn-primary mx-2" style="min-width: 100px" />
+                            <button onclick="window.close()" class="btn btn-secondary mx-2" style="min-width: 100px">Close</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    }
+    else if (ViewData["ApprovalResponse"]?.ToString() == "Decline")
+    {
+        <div class="mt-5">
+            <div class="card border rounded col-xl-6 mx-auto">
+                <h2 class="card-header text-center">@Html.DisplayFor(model => model.ProjectName)</h2>
+                <h5 class="text-center text-danger mb-2" style="margin-top: -15px"><em>Budget Declined</em></h5>
+                <form method="post" action="@Url.Action("UpdateApprovalStatus", "Project")">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" name="projectId" value="@Model.ProjectId" />
+                    <div class="card-body px-1 px-md-4 pb-4">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <p class="pb-2"><b>Description:</b> @Html.DisplayFor(model => model.Description)</p>
+                                <p class="pb-2"><b>Timeline:</b> @Model.StartDate.ToString("MMM dd, yyyy") - @Model.EndDate.ToString("MMM dd, yyyy")</p>
+                                <p class="pb-2"><b>Manager:</b> @Html.DisplayFor(model => model.Manager)</p>
+                                <p class="pb-2"><b>Budget:</b> @Html.DisplayFor(model => model.PlannedBudget)</p>
+                            </div>
+                            <div class="col-12 col-md-6 pl-3">
+                                <label class="pb-2" for="remarks"><b>Remarks: </b></label>
+                                <textarea name="remarks" style="height:125px" id="basic-default-message" class="form-control h-80 h-md-120" required></textarea>
+                                <span asp-validation-for="ProjectName" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="pt-4 pb-3 d-flex justify-content-center">
+                            <input type="hidden" name="approvalstatus" value="Declined" />
+                            <input type="submit" onsubmit="window.close()" value="Decline" class="btn btn-danger mx-2" style="min-width: 100px" />
+                            <button onclick="window.close()" class="btn btn-secondary mx-2" style="min-width: 100px">Close</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    }
+    
+}
