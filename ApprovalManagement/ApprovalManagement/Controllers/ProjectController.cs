@@ -147,11 +147,11 @@ namespace ApprovalManagement.Controllers
         {
             var smtpClient = new SmtpClient("smtp.gmail.com", 587);
             smtpClient.UseDefaultCredentials = false;
-            smtpClient.Credentials = new NetworkCredential("dbtird.intern1@gmail.com", "ijjshosbsiupxxaf");
+            smtpClient.Credentials = new NetworkCredential("", "");
             smtpClient.EnableSsl = true;
 
             var mailMessage = new System.Net.Mail.MailMessage();
-            mailMessage.From = new MailAddress("dbtird.intern1@gmail.com");
+            mailMessage.From = new MailAddress("");
             mailMessage.To.Add(recipient);
             mailMessage.Subject = subject;
             mailMessage.Body = body;
@@ -184,7 +184,7 @@ namespace ApprovalManagement.Controllers
                 {
                     // send email to notify stakeholders that the project is ready for budget approval
                     var approvalLink = Url.Action("ApprovalForm", "Project", new { projectId = project.ProjectId }, Request.Scheme);
-                    var recipients = "villabroza.hanssell@gmail.com";
+                    var recipients = "";
                     var subject = project.ProjectName + " - Budget Approval";
                     var body = $@"
                         <p>Hello Direc!</p>
@@ -290,7 +290,7 @@ namespace ApprovalManagement.Controllers
                     // Open the copy of the template file
                     using (var doc = WordprocessingDocument.Open(reportFullPath, true))
                     {
-                        string approverName = "Candy Orate";
+                        string approverName = "";
 
                         // Get the main document part of the docx file
                         MainDocumentPart mainPart = doc.MainDocumentPart;
@@ -334,7 +334,7 @@ namespace ApprovalManagement.Controllers
 
                         // send email to notify stakeholders that the project is ready for budget approval
                         var approvalReportPath = new List<string> { "wwwroot/reports/" + project.ProjectName + "_" + project.ApprovalStatus.ToString() + "_" + project.DateOfApproval.ToString("yyyy-mm-dd") + ".pdf" };
-                        var recipients = "villabroza.hanssell@gmail.com";
+                        var recipients = "";
                         var subject = project.ProjectName + " - Responded ";
                         if (project.ApprovalStatus == ApprovalStatusValue.Approved)
                         {
