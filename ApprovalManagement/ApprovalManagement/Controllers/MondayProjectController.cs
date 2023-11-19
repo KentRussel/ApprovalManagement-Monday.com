@@ -44,11 +44,11 @@ namespace ApprovalManagement.Controllers
         {
             var smtpClient = new SmtpClient("smtp.gmail.com", 587);
             smtpClient.UseDefaultCredentials = false;
-            smtpClient.Credentials = new NetworkCredential("dbtird.intern4@gmail.com", "kovibpfwmuefqtil");
+            smtpClient.Credentials = new NetworkCredential("", "");
             smtpClient.EnableSsl = true;
 
             var mailMessage = new System.Net.Mail.MailMessage();
-            mailMessage.From = new MailAddress("dbtird.intern4@gmail.com");
+            mailMessage.From = new MailAddress("");
             mailMessage.To.Add(recipient);
             mailMessage.Subject = subject;
             mailMessage.Body = body;
@@ -73,11 +73,11 @@ namespace ApprovalManagement.Controllers
         {
             var smtpClient = new SmtpClient("smtp.gmail.com", 587);
             smtpClient.UseDefaultCredentials = false;
-            smtpClient.Credentials = new NetworkCredential("dbtird.intern4@gmail.com", "kovibpfwmuefqtil");
+            smtpClient.Credentials = new NetworkCredential("", "");
             smtpClient.EnableSsl = true;
 
             var mailMessage = new System.Net.Mail.MailMessage();
-            mailMessage.From = new MailAddress("dbtird.intern4@gmail.com");
+            mailMessage.From = new MailAddress("");
             mailMessage.To.Add(recipient);
             mailMessage.Subject = subject;
             mailMessage.Body = body;
@@ -104,8 +104,8 @@ namespace ApprovalManagement.Controllers
             try
 
             {
-                string apiToken = "eyJhbGciOiJIUzI1NiJ9.eyJ0aWQiOjE2NjA2MTI1NSwiYWFpIjoxMSwidWlkIjoxNzM1ODE1NCwiaWFkIjoiMjAyMi0wNi0xN1QwNTo0NjowMC4wMDBaIiwicGVyIjoibWU6d3JpdGUiLCJhY3RpZCI6Njc3NzM2MCwicmduIjoidXNlMSJ9.kHYwChnla-HsIRnc8fvtr1x4O8jp6xFLz-XRPZyYQNg";
-                string apiRoot = "https://api.monday.com/v2/";
+                string apiToken = "";
+                string apiRoot = "";
 
                 using (var client = new MondayClient(apiToken, apiRoot))
 
@@ -179,8 +179,8 @@ namespace ApprovalManagement.Controllers
 
             else
             {
-                string apiToken = "eyJhbGciOiJIUzI1NiJ9.eyJ0aWQiOjE2NjA2MTI1NSwidWlkIjoxNzM1ODE1NCwiaWFkIjoiMjAyMi0wNi0xN1QwNTo0NjowMC4wMDBaIiwicGVyIjoibWU6d3JpdGUiLCJhY3RpZCI6Njc3NzM2MCwicmduIjoidXNlMSJ9.K25dV5_Je9n59GzvI4ec4mNhUw6bh_8ZuikgxzlMMnQ";
-                string apiRoot = "https://api.monday.com/v2/";
+                string apiToken = "";
+                string apiRoot = "";
 
                 using (var client = new MondayClient(apiToken, apiRoot))
                 {
@@ -328,8 +328,8 @@ namespace ApprovalManagement.Controllers
         [HttpPost]
         public async Task<IActionResult> UpdateApprovalStatus(string pulseId, string boardId, string approvalStatusId, string approvalStatus, string remarksId, string remarks, string approvedBudgetId, string approvedBudget, string dateOfApprovalId, string dateOfApproval)
         {
-            string apiToken = "eyJhbGciOiJIUzI1NiJ9.eyJ0aWQiOjE2NjA2MTI1NSwidWlkIjoxNzM1ODE1NCwiaWFkIjoiMjAyMi0wNi0xN1QwNTo0NjowMC4wMDBaIiwicGVyIjoibWU6d3JpdGUiLCJhY3RpZCI6Njc3NzM2MCwicmduIjoidXNlMSJ9.K25dV5_Je9n59GzvI4ec4mNhUw6bh_8ZuikgxzlMMnQ";
-            string apiRoot = "https://api.monday.com/v2/";
+            string apiToken = "";
+            string apiRoot = "";
 
             using (var client = new MondayClient(apiToken, apiRoot))
             {
