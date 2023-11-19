@@ -11,8 +11,8 @@ namespace ApprovalManagement.Helper
     public class MondayHelper
 
     {
-        private const string MondayApiKey = "eyJhbGciOiJIUzI1NiJ9.eyJ0aWQiOjE2NjA2MTI1NSwiYWFpIjoxMSwidWlkIjoxNzM1ODE1NCwiaWFkIjoiMjAyMi0wNi0xN1QwNTo0NjowMC4wMDBaIiwicGVyIjoibWU6d3JpdGUiLCJhY3RpZCI6Njc3NzM2MCwicmduIjoidXNlMSJ9.kHYwChnla-HsIRnc8fvtr1x4O8jp6xFLz-XRPZyYQNg";
-        private const string MondayApiUrl = "https://api.monday.com/v2/";
+        private const string MondayApiKey = "";
+        private const string MondayApiUrl = "";
         
         public async Task<string> QueryMondayApiV2(string query)
 
